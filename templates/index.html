@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Features</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Vote for Your Desired Features</h1>
+    
+    <form action="/vote" method="POST">
+        <label for="feature">Choose a feature to vote for:</label>
+        <select name="feature" id="feature">
+            <option value="Dark Mode">Dark Mode</option>
+            <option value="Notifications">Notifications</option>
+            <option value="Offline Access">Offline Access</option>
+        </select>
+        <button type="submit">Vote</button>
+    </form>
+
+    <!-- <h2>Current Voting Results:</h2>
+    <ul>
+        {% for feature, votes in data.items() %}
+        <li>{{ feature }}: {{ votes }} votes</li>
+        {% endfor %}
+    </ul>-->
+</body>
+</html>

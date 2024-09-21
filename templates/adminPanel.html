@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Create Poll</title>
+</head>
+<body>
+    <h1>Create a New Poll</h1>
+    <form method="POST" action="{{ url_for('create_poll') }}">
+        <label for="app_id">Application:</label>
+        <select name="app_id">
+            {% for app in apps %}
+            <option value="{{ app.app_id }}">{{ app.app_name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="feature_name">Feature Name:</label>
+        <input type="text" id="feature_name" name="feature_name" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+
+        <button type="submit">Create Poll</button>
+    </form>
+</body>
+</html>
