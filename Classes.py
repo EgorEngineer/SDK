@@ -5,7 +5,6 @@ class Feature:
         self.feature_id = last_feature_id + 1
         self.app_id = app.app_id
         self.created_at = datetime.now()
-
     @property
     def feature_name(self):
         return self._feature_name
