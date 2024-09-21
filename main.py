@@ -14,3 +14,4 @@ kano.add_feature("Feature 1", customer_satisfaction=1, functionality=1)
 kano.add_feature("Feature 2", customer_satisfaction=1, functionality=0)
 print("One-dimensional Features:", kano.get_features_by_category('One-dimensional'))
 print("Attractive Features:", kano.get_features_by_category('Attractive'))
+
