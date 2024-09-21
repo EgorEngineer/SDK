@@ -1,14 +1,18 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 from telegram import ReplyKeyboardMarkup
+from dotenv import load_dotenvs,fin
 import logging
 import prioritizationMethods as pm
+import os
+from dotenv import load_dotenvs
+
+# Команды для взаимодействия
+ADMIN_ACTIONS = ["Create Feature", "Edit Feature", "Prioritize Features"]
 
 # Структуры для обработки состояний
 CREATE_FEATURE, EDIT_FEATURE, CHOOSE_PRIORITIZATION, VIEW_REPORT = range(4)
 
-# Команды для взаимодействия
-ADMIN_ACTIONS = ["Create Feature", "Edit Feature", "Prioritize Features"]
 
 # Логирование ошибок
 logging.basicConfig(
@@ -109,11 +113,8 @@ async def rice_prioritization(update: Update, context: ContextTypes.DEFAULT_TYPE
     await update.message.reply_text(report)
 
 
-# Аналогично можно реализовать ICE и Kano
-
 def main():
-    # Замените "YOUR_BOT_TOKEN" на токен вашего бота
-    application = ApplicationBuilder().token("YOUR_BOT_TOKEN").build()
+    application = ApplicationBuilder().token(os.getenv('TOKEN')).build()
 
     # Регистрируем обработчики
     application.add_handler(CommandHandler("start", start))

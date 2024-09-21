@@ -37,7 +37,6 @@ class Votes:
 
 
 class Results:
-
     def init(self, result_id, feature_id, total_votes, positive_votes, negative_votes, last_updated):
         self.result_id = result_id
         self.feature_id = feature_id
