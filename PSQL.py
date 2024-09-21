@@ -4,6 +4,7 @@ from flask_migrate import Migrate
 # from flask_login import LoginManager, login_required, current_user
 from datetime import datetime
 
+"Flask"
 app = Flask('main')
 
 # Подключение к базе данных PostgreSQL
