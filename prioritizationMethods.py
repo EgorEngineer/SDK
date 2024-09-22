@@ -86,3 +86,6 @@ class Kano:
         category: Категория (Must-have, One-dimensional, Attractive, Indifferent, Reverse).
         """
         return self.kano_categories.get(category, [])
+
+
+
