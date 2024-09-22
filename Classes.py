@@ -8,7 +8,6 @@ class Feature:
     def start_voting(self):
         pass
 
-
 class App:
     def init(self):
         self.app_id = None
